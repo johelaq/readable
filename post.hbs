@@ -1,0 +1,44 @@
+{{!< default}}
+
+{{#post}}
+    <div class="inner cover post post-head">
+        <h1 class="cover-heading post-title">{{{title}}}</h1>
+    </div>
+
+    <div class="inner cover post post-body">
+        {{content}}
+    </div>
+
+    <div class="inner cover container post post-foot">
+        <div class="post-foot-right">
+            <a href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
+               onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+               onclick="window.open(this.href, 'facebook-share', 'width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <a href="https://plus.google.com/share?url={{url absolute="true"}}"
+               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                <i class="fa fa-google-plus-square"></i>
+            </a>
+        </div>
+    </div>
+    <hr style="margin-bottom:5px"/>
+    <div class="inner cover container post post-foot footer-info text-muted">
+        {{! Everything inside the #author tags pulls data from the author }}
+        {{#author}}
+            <div class="post-foot-left">
+                <a href="{{url}}">{{name}}</a>
+            </div>
+        {{/author}}
+        <div class="post-foot-right">
+            <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+        </div>
+        <div>
+            <!--{{#if tags}}<code class="tag">{{tags separator="</code> <code class=\"tag\">"}}</code>{{/if}}-->
+            {{#if tags}}TAGGED IN {{tags separator=", "}}{{/if}}
+        </div>
+    </div>
+{{/post}}

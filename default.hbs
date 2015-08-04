@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    {{!Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    {{! Style'n' Scripts }}
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway:400,700"/>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/custom.css"}}"/>
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+{{! Everything else gets inserted here }}
+<div class="container">
+    <div class="site-wrapper">
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand">{{@blog.title}}</h3>
+                        {{navigation}}
+                    </div>
+                </div>
+                {{{body}}}
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <footer class="site-footer">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="{{@blog.url}}/rss/"><span class="glyphicon glyphicon-plane"></span> Subscribe</a>
+
+                        <div class="text-muted">
+                            <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy;
+                                2015 &bull; All rights reserved.
+                            </section>
+                            <section class="poweredby">Proudly published with <a href="http://ghost.org">Ghost</a>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+
+{{! Ghost outputs important scripts and data with this tag }}
+{{ghost_foot}}
+
+{{! The main JavaScript file for Readable }}
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{asset "js/jquery.bootstrap-autohidingnavbar.min.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+
+
+</body>
+</html>

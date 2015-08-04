@@ -1,0 +1,301 @@
+/*
+ *
+ * Globals
+ *
+ */
+/* Links */
+a,
+a:focus,
+a:hover {
+    color: #444;
+}
+
+h1 {
+    margin: .67em 0;
+    padding-top: 25px;
+    font-size: 2em;
+}
+
+.masthead {
+    background: rgba(255, 255, 255, 0.9);
+    border: 0 solid white;
+    border-bottom-width: 1px;
+}
+
+/* Custom default button */
+
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+    color: #333;
+    text-shadow: none;
+    /* Prevent inheritence from `body` */
+
+    background-color: #444;
+    border: 1px solid #444;
+}
+
+/*
+ *
+ * Base structure
+ *
+ */
+
+html,
+body {
+    height: 100%;
+    background-color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 22px;
+    text-align: center;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+
+.site-wrapper {
+    display: table;
+    width: 100%;
+    height: 100%;
+    /*Stick footer to bottom */
+    margin-bottom: 50px;
+    /* For at least Firefox */
+
+    min-height: 100%;
+}
+
+.site-wrapper-inner {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.cover-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Padding for spacing */
+
+.inner {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/*
+ *
+ * Header
+ *
+ */
+
+.masthead-brand {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+    display: inline-block;
+}
+
+.masthead-nav > li + li {
+    margin-left: 20px;
+}
+
+.masthead-nav > li > a {
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    /* IE8 proofing */
+    color: rgba(68, 68, 68, 1)
+    border-bottom: 2px solid transparent;
+}
+
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+    background-color: transparent;
+    border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+    color: #444;
+    border-bottom-color: #444;
+}
+
+@media (min-width: 768px) {
+    .masthead-brand {
+        float: left;
+    }
+
+    .masthead-nav {
+        float: right;
+    }
+}
+
+/*
+ *
+ * Cover
+ *
+ */
+
+.cover {
+    padding: 0 20px;
+}
+
+.cover .btn-lg {
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+/*
+ *  
+ * Footer
+ *
+ */
+.mastfoot {
+    color: #999;
+    /* IE8 proofing */
+
+    color: rgba(255, 255, 255, .5);
+}
+
+.site-footer {
+    font-size: 14px;
+    /*height: 142px;*/
+}
+
+.footer-info {
+    font-size: 14px;
+}
+
+/*
+ *
+ * Social icons
+ *
+ */
+.fa-facebook:hover {
+    color: #3b5998;
+}
+
+.fa-twitter:hover {
+    color: #55acee;
+}
+
+.fa-google-plus-square:hover {
+    color: #dd4b39;
+}
+
+/*
+ *  
+ * Affix and center
+ *   
+ */
+@media (min-width: 768px) {
+    /* Pull out the header and footer */
+    .masthead {
+        position: fixed;
+        top: 0;
+    }
+
+    .mastfoot {
+        position: fixed;
+        bottom: 0;
+    }
+
+    /* Start the vertical centering */
+    .site-wrapper-inner {
+        vertical-align: top;
+        padding-top: 5em;
+    }
+
+    .site-wrapper-inner-centered {
+        vertical-align: middle;
+    }
+
+    /* Handle the widths */
+    .masthead,
+    .mastfoot,
+    .cover-container {
+        width: 100%;
+        /* Must be percentage or pixels for horizontal alignment */
+    }
+}
+
+@media (min-width: 992px) {
+    .masthead,
+    .mastfoot,
+    .cover-container {
+        width: 700px;
+    }
+}
+
+/*
+ *:q
+ * Boostrap
+ *
+ */
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+code {
+    text-shadow: none;
+    color: #1B1B1B;
+}
+
+.post {
+    text-align: left;
+    max-width: 100%
+}
+
+.post-title {
+    margin: .63em 0 0;
+}
+
+.post-head {
+
+}
+
+.post-body {
+    padding-top: 25px;
+}
+
+.post-foot {
+    padding-bottom: 25px;
+    position: relative;
+}
+
+.post-foot-left {
+    height: 100%;
+    width: 75%;
+}
+
+.post-foot-right {
+    text-align: right;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    width: 25%;
+    margin-right: 20px;
+}
+
+.tag {
+    background-color: #EEEEEE;
+    border: 1px solid #EEE;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+
+
